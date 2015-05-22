@@ -3,11 +3,13 @@ modules.define(
     [
         'react-loader_type_with-addons',
         'reflux',
+        'bem-cn',
         'my-block__actions',
         'my-block__store'
     ],
-    (provide, React, Reflux, Actions, Store) => {
+    (provide, React, Reflux, BEM, Actions, Store) => {
 
+var b = BEM('my-block');
 
 provide(React.createClass({
 
@@ -30,14 +32,24 @@ provide(React.createClass({
     render() {
 
         return (
-            <div>
-                <a onClick={ this.onIncrement }>Click Me!</a>
-                <div>Clicks: { this.state.value }</div>
-                <a onClick={ this.onClear }>Clear</a>
+            <div className={ b() }>
+                <div className={ b('counter') }>
+                    Clicks: { this.state.value }
+                </div>
+                <span
+                    className={ b('increment') }
+                    onClick={ this.onIncrement }>
+                        Click Me!
+                </span>
+                &nbsp; | &nbsp;
+                <span
+                    className={ b('clear', { disabled: this.state.value === 0 }) }
+                    onClick={ this.onClear }>
+                        Clear
+                </span>
             </div>
         )
     }
-
 }));
 
 });

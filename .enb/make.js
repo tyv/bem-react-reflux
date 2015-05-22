@@ -23,8 +23,7 @@ module.exports = function (config) {
             [require('enb-babel/techs/prepend-modules'), { source: '?.babel.js', target: '?.pre.js' }],
 
             // borschik
-            [borschikTech, { sourceTarget: '?.css', destTarget: '_?.css', tech: 'cleancss', freeze: true, minify: isProd }],
-            //[borschikTech, { sourceTarget: '?.js', destTarget: '_?.js', freeze: true, minify: isProd }]
+            [borschikTech, { sourceTarget: '?.css', destTarget: '_?.css', tech: 'cleancss', freeze: true, minify: isProd }]
         ]);
 
         nodeConfig.addTargets([
@@ -50,7 +49,7 @@ module.exports = function (config) {
 function getDesktops(config) {
     return [
         'libs/bem-core/common.blocks',
-        'reactreflux.blocks',
+        'react-tools.blocks',
         'desktop.blocks'
     ].map(function (level) {
         return config.resolvePath(level);

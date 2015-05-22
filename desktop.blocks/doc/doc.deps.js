@@ -4,7 +4,8 @@
             block: 'react-loader',
             mods: { type: 'with-addons' }
         },
-        'reflux'
+        'reflux',
+        'bem-cn'
     ],
     shouldDeps: [
         'my-block'
