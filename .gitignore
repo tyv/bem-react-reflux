@@ -1,0 +1,8 @@
+node_modules/
+
+# bem and libs
+libs/
+.enb/tmp/
+*.bundles*/*/*.*
+!*.bundles*/*/*.bemdecl.js
+!*.bundles*/*/*.html

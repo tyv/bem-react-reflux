@@ -1,0 +1,31 @@
+{
+  "name": "bem-react",
+  "description": "BEM project",
+  "version": "0.0.0",
+  "repository": {},
+  "author": {
+    "name": "Yuri Tkachenko",
+    "email": "yuri@ya.ru"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "borschik-tech-cleancss": "2.0.1",
+    "bower": "1.4.1",
+    "enb": "0.15.0",
+    "enb-autoprefixer": "0.2.3",
+    "enb-babel": "^0.3.2",
+    "enb-bem-techs": "1.0.4",
+    "enb-borschik": "1.5.0",
+    "enb-modules": "^0.2.0",
+    "enb-stylus": "1.2.3",
+    "ym": "^0.1.1"
+  },
+  "scripts": {
+    "postinstall": "npm run deps",
+    "deps": "bower install --non-interactive",
+    "start": "enb server"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
