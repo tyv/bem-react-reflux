@@ -29,5 +29,9 @@ To demonstrate technologies encapsulation in BEM architecture.
 |
 ```
 
-
+##Install and run
+Clone this repo and run
+```bash
+npm i && npm start
+```
 
